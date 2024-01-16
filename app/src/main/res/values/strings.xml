@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SMS Demo</string>
+    <string name="reply_label">Reply</string>
+    <string name="textview">TextView</string>
+</resources>
