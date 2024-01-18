@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
         RemoteInput remoteInput = new RemoteInput.Builder("key_text_reply")
                 .setLabel("Your answer....")
                 .build();
-        Intent replyIntent = new Intent(this , MyReceiver.class);
-        PendingIntent pendingReplyIntent  = PendingIntent.getBroadcast(this,0,replyIntent,
-                    PendingIntent.FLAG_MUTABLE);
-        NotificationCompat.Action replyAction = new NotificationCompat.Action.Builder(
-                R.drawable.ic_reply,"Reply",pendingReplyIntent).addRemoteInput(remoteInput).build();
+//        Intent replyIntent = new Intent(this , MyReceiver.class);
+//        PendingIntent pendingReplyIntent  = PendingIntent.getBroadcast(this,0,replyIntent,
+//                    PendingIntent.FLAG_MUTABLE);
+//        NotificationCompat.Action replyAction = new NotificationCompat.Action.Builder(
+//                R.drawable.ic_reply,"Reply",null).addRemoteInput(remoteInput).build();
         NotificationCompat.MessagingStyle messagingStyle = new NotificationCompat.MessagingStyle("me");
         messagingStyle.setConversationTitle("Group chat");
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), channel_id)
@@ -114,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
-                .addAction(replyAction)
                 .setColor(Color.BLUE);
 
 
